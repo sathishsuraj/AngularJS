@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD  
+ Struts Configuration 2.1//EN"   
+"http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+<package name="angular" extends="struts-default">  
+  
+<action name="login">  
+<result >jsp/login.jsp</result>  
+</action>  
+  
+<action name="loginprocess" class="com.angular.Login">  
+<result name="success"  >jsp/loginsuccess.jsp</result>  
+<result name="error" >jsp/loginerror.jsp</result>  
+</action>  
+  
+<action name="logout" class="com.angular.Login" method="logout">  
+<result name="success" >jsp/logoutsuccess.jsp</result>  
+</action>  
+  
+<action name="profile" class="com.angular.Profile">  
+<result name="success" >jsp/profilesuccess.jsp</result>  
+<result name="error" >jsp/profileerror.jsp</result>  
+</action>  
+  
+</package>  
+</struts>      
